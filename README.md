@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ระบบนัดหมายครูตรวจสอบความดี - RD Review</title>
+    <title>บันทึกกิจกรรมสาธารณะประโยชน์ - RD Review</title>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -106,6 +106,7 @@
 
         input[type="text"],
         input[type="date"],
+        input[type="file"],
         select,
         textarea {
             width: 100%;
@@ -360,8 +361,8 @@
         <!-- Header -->
         <header>
             <img src="https://www.ro.ac.th/home/wp-content/uploads/2021/10/logo_RO-removebg-preview.png" alt="ตราโรงเรียนวัดราชโอรส">
-            <h1>ระบบนัดหมายครูตรวจสอบความดี</h1>
-            <p>ใช้สำหรับนัดครูในระบบแบบ minimal + professional</p>
+            <h1>บันทึกกิจกรรมสาธารณะประโยชน์</h1>
+            <p>ใช้สำหรับบันทึกกิจกรรมสาธารณะประโยชน์แบบ minimal + professional</p>
             <p>ให้ผลลัพธ์บันทึกเข้า Google Sheets โดยอัตโนมัติ</p>
             <a href="#" class="google-link">ใช้งานผ่าน Google "Prompt" คำนำ</a>
         </header>
@@ -378,8 +379,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="school">โรงเรียน <span class="required">*</span></label>
-                    <input type="text" id="school" name="school" placeholder="กรุณากรอกชื่อโรงเรียน" required>
+                    <label for="school">รหัสนักเรียน <span class="required">*</span></label>
+                    <input type="text" id="school" name="school" placeholder="กรุณากรอกรหัสนักเรียน" required>
                 </div>
 
                 <div class="form-group">
@@ -391,13 +392,14 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="appointmentDate">กรณี: เลือกวันนัด <span class="required">*</span></label>
+                    <label for="appointmentDate">วันที่ทำกิจกรรม <span class="required">*</span></label>
                     <input type="date" id="appointmentDate" name="appointmentDate" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="description">ลายพิมพ์วิชาความดี <span class="required">*</span></label>
-                    <textarea id="description" name="description" placeholder="กรุณากรอกรายละเอียดลายพิมพ์วิชาความดี" required></textarea>
+                    <label for="imageUpload">ช่องสำหรับแนบภาพประกอบ <span class="required">*</span></label>
+                    <input type="file" id="imageUpload" name="imageUpload" accept="image/*" style="padding: 10px;" required>
+                    <small style="display: block; margin-top: 5px; color: #718096;">รองรับไฟล์: JPG, PNG, GIF (ขนาดไม่เกิน 5MB)</small>
                 </div>
 
                 <div class="form-group">
@@ -421,7 +423,7 @@
                 <h2>ปุ่มส่งข้อมูล</h2>
                 
                 <div class="form-group">
-                    <p style="color: #4a5568; font-size: 15px;">ปุ่มส่ง: ชื่อความ "นัดครูตรวจสอบความดี"</p>
+                    <p style="color: #4a5568; font-size: 15px;">ปุ่มส่ง: ชื่อความ "ยืนยัน"</p>
                 </div>
 
                 <div class="form-group checkbox-group">
@@ -438,7 +440,7 @@
 
             <!-- Submit Button -->
             <div class="submit-section">
-                <button type="submit">นัดครูตรวจสอบความดี</button>
+                <button type="submit">ยืนยัน</button>
             </div>
         </form>
 
